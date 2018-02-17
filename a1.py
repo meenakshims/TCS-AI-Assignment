@@ -52,22 +52,30 @@ iris['length']=l
 print(iris)
 
 #9.
-g=iris.groupby('Species')
-plt.hist(g)
-plt.show()
+#g=iris.groupby('Species')
+#plt.hist(g,bins=20)
+#plt.show()
 
 #10.
 print("Deviation:",np.std(sepallength)) 
 
 c=iris.drop(['Id','Species'], axis=1).corr()
 print(c)
-#for i in range(len(c.columns)):
- #       for j in range(i):
-  #          if c.iloc[i, j] >= 0.7:
-   #             colname = c.columns[i]
-	#	print("name",colname)
+col = []
+
+for i in features:
+    for j in features:
+        if (abs(c[i][j]) > 0.7) and (i != j):
+            col.append(i)
+print("Columns with >70%")
+print(np.unique(col))
 
 
+#12.
+print(iris.isnull())
+
+#13.
+iris.to_csv('new_iris.csv',index=False)
 
 
 
