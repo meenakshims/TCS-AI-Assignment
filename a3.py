@@ -1,6 +1,7 @@
 import numpy as np
 from numpy import *
-#1.
+
+#1.Create a function which creates an n×n array with (i,j)-entry equal to i+j.
 print("A1.")
 def array(n):
 	a = []
@@ -13,7 +14,7 @@ def array(n):
 n=int(input("Enter size of 2d array:"))
 array(n)
 
-#2.
+#2.Create a numpy array which contains odd numbers below 20. Arrange it to a 2x5 matrix. Compute the log of each element.
 print("--------------")
 print("--------------")
 print("A2.")
@@ -28,7 +29,7 @@ print("--------------")
 
 print("--------------")
 
-#3.
+#3.Create a function which creates an n×n random array. Subtract the average of each row of the matrix 
 print("A3.")
 def randomfn(m):
 	r=np.random.randint(5,size=(m,m))
@@ -47,7 +48,7 @@ print("--------------")
 print("--------------")
 
 
-#4.
+#4.Create a function which creates an n×n random array. Write a program to find the nearest value from a given value in the array.
 print("A4.")
 def find_nearest(array,value):
 	idx = (np.abs(array-value)).argmin()
@@ -66,7 +67,8 @@ print("Nearest value:",find_nearest(array, value))
 print("--------------")
 print("--------------")
 
-#5.
+#5.Write a function to check if two random arrays are equal or not. 
+
 print("A5.")
 def equal():
 	f=1
@@ -80,7 +82,7 @@ def equal():
 	print("--------------")
 equal()
 
-#6.
+#6.Create a function to get the n largest values of an array.
 print("A6.")
 def largest():
 	m=int(input("Enter size of array:"))
